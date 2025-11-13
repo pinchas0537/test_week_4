@@ -6,11 +6,11 @@ import caeser
 
 app = FastAPI()
 
-@app.get("/tast")
+@app.get("/test")
 def get_test():
     return {"msg": "hi from test"}
 
-@app.get("/tast{name}")
+@app.get("/test{name}")
 def get_name(name):
     with open("names.txt","a") as f:
         f.write(name)
