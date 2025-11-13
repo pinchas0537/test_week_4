@@ -1,4 +1,4 @@
-Pinchas
-Lifshitz
-galil
+פינחס
+ליפשיץ
+גליל
 212627277
