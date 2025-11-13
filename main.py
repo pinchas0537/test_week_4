@@ -10,7 +10,7 @@ app = FastAPI()
 def get_test():
     return {"msg": "hi from test"}
 
-@app.get("/test{name}")
+@app.get("/test/{name}")
 def get_name(name):
     with open("names.txt","a") as f:
         f.write(name)
