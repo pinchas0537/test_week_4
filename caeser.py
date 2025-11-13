@@ -7,12 +7,12 @@ all_ch = [
         "s","t","u","v",
         "w","x","y","z"]
 
-def encrypted_caeser(text:str):
+def encrypted_caeser(text:str, offset:int,mood: str):
     nwe_text = ""
-    body = { "text": text, "offset":4}
     for i in text:
         for j in all_ch:
             if i == j:
-                a = all_ch.index(j) + body["offset"]
+                a = all_ch.index(j) + offset
                 nwe_text += all_ch[a]
-    return {"encrypted_text": nwe_text}
+
+    return {mood+"_text" : nwe_text}

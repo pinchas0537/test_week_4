@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 import uvicorn
-import pydantic
 import fence
 import caeser
 
@@ -18,8 +17,10 @@ def get_name(name):
 
 @app.post("/caesar")
 def post_caesar(text:dict):
-    letter = text["encrypted_text"]
-    return caeser.encrypted_caeser(letter)
+    letter = text["text"]
+    offset = text["offset"]
+    mode = text["mode"]
+    return caeser.encrypted_caeser(letter,offset,mode)
 
 @app.get("/fence/encrypt")
 def get_encrypt_fance(text:str):
